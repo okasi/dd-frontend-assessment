@@ -7,13 +7,12 @@ import { useAuth } from "./useAuth"
 const Header = ({ siteTitle }) => {
   const auth = useAuth()
   return (
-    <header className="bg-dd-blue mb-5">
+    <header className="bg-dd-blue mb-5 shadow">
       <div className="mx-auto max-w-screen-lg p-5 flex flex-row justify-between items-center">
         <h1 style={{ margin: 0 }}>
           <Link
-            to="/"
+            to={auth.user ? "/plans" : "/"}
             style={{
-              color: `white`,
               textDecoration: `none`,
             }}
           >

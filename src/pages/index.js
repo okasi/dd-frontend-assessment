@@ -6,6 +6,8 @@ import SEO from "../atomic/03-organisms/seo"
 import SmartButton from "../atomic/01-atoms/SmartButton"
 import { useAuth } from "../atomic/03-organisms/useAuth"
 
+import Pulse from "react-reveal/Pulse"
+
 const IndexPage = () => {
   const auth = useAuth()
   const [email, setEmail] = useState(null)
@@ -20,8 +22,15 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Start" />
+
+      <Pulse>
+        <h1 className="mx-auto text-2xl text-center">Welcome!</h1>
+      </Pulse>
+      <h2 className="text-lg max-w-xs mx-auto mt-4">
+        Please sign in with your Diet Doctor member account details down below.
+      </h2>
       <form
-        className="flex flex-col items-center"
+        className="flex flex-col items-center mt-8"
         onSubmit={async e => {
           e.preventDefault()
           if (e.key !== "Enter") {
@@ -34,6 +43,7 @@ const IndexPage = () => {
           }
         }}
       >
+        {/* Should make a input component with many options, also with realtime validaiton */}
         <div>
           <label className="text-md font-semibold" htmlFor="email">
             <span>Email</span>
