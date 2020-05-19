@@ -221,7 +221,7 @@ const PlanPage = props => {
                       key={index}
                     >
                       <img
-                        src={`https://www.dietdoctor.com${recipe.images.default}`}
+                        src={`https://i.dietdoctor.com${recipe.images.default}?auto=compress%2Cformat&w=600&h=600&fit=crop`}
                         className="rounded-lg w-64 h-64 object-cover border border-outline"
                       ></img>
                       <div className="mt-4 md:mt-0 md:mx-4 w-full max-w-lg">

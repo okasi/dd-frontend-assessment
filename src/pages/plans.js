@@ -87,9 +87,10 @@ const PlansPage = props => {
                                 .filter(res => res.name === day)
                                 .map(
                                   ele =>
-                                    `https://www.dietdoctor.com${ele.dinner.recipesDetails[0]?.images?.default}`
+                                    `https://i.dietdoctor.com${ele.dinner.recipesDetails[0]?.images?.default}?auto=compress%2Cformat&w=300&h=450&fit=crop`
                                 )}
                               className="max-w-full h-full block p-1 object-cover"
+                              style={{ maxWidth: "384px" }}
                             ></img>
                             <div className="absolute inset-0 text-xl text-dd-black opacity-75 m-2">
                               {capitalizeFirstLetter(day.slice(0, 3))}
